@@ -6,8 +6,7 @@ let app = new Vue({
   el: "#app",
   data: {
     coins: [],
-    coinData: {},
-    message: 'hola'
+    coinData: {}
   },
 
   methods: {
