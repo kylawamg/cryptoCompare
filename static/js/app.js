@@ -1,5 +1,5 @@
 //const CRYPTOCOMPARE_API_URI = "https://www.cryptocompare.com";
-const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com/";
+const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
 //https://min-api.cryptocompare.com/
 const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com";
 const UPDATE_INTERVAL = 60 * 1000;
@@ -15,7 +15,7 @@ let app = new Vue({
     getCoinData: function() {
       let self = this;
 
-      axios.get(CRYPTOCOMPARE_API_URI + "/api/data/coinlist")
+      axios.get(CRYPTOCOMPARE_API_URI + "/data/all/coinlist")
         .then((res) => {
             this.coinData = res.data.Data;
             console.log(JSON.stringify("getting coin data."));
