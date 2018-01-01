@@ -20,7 +20,7 @@ let app = new Vue({
         .then((res) => {
             this.coinData = res.data.Data;
             //console.log(JSON.stringify("getting coin data."));
-            //console.log(JSON.stringify(res));
+            console.log(JSON.stringify(res));
             this.getCoins();
           })
         .catch((err) => {
