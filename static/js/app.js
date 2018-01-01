@@ -1,7 +1,7 @@
 //const CRYPTOCOMPARE_API_URI = "https://www.cryptocompare.com";
 //crypto compare api has changed and hence changing its base url to the latest version
 const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com";
-
+const CRYPTOCOMPARE_BASE_IMAGE_URI = "https://www.cryptocompare.com";
 const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com";
 const UPDATE_INTERVAL = 60 * 1000;
 
@@ -46,7 +46,7 @@ let app = new Vue({
       symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
      // console.log(JSON.stringify("getting coin Image."));
-      return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
+      return CRYPTOCOMPARE_BASE_IMAGE_URI + this.coinData[symbol].ImageUrl;
     },
     getColor: (num) => {
 //      console.log(JSON.stringify("getting coin color."));
