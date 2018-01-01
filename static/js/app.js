@@ -18,6 +18,7 @@ let app = new Vue({
       axios.get(CRYPTOCOMPARE_API_URI + "/api/data/coinlist")
         .then((res) => {
             this.coinData = res.data.Data;
+            console.log(JSON.stringify(this.coinData));
             this.getCoins();
           })
         .catch((err) => {
