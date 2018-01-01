@@ -1,4 +1,6 @@
-const CRYPTOCOMPARE_API_URI = "https://www.cryptocompare.com";
+//const CRYPTOCOMPARE_API_URI = "https://www.cryptocompare.com";
+const CRYPTOCOMPARE_API_URI = "https://min-api.cryptocompare.com/";
+//https://min-api.cryptocompare.com/
 const COINMARKETCAP_API_URI = "https://api.coinmarketcap.com";
 const UPDATE_INTERVAL = 60 * 1000;
 
