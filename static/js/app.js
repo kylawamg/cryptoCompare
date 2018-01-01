@@ -45,11 +45,11 @@ let app = new Vue({
       //console.log(JSON.stringify(this.coinData));
       symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
-      console.log(JSON.stringify("getting coin Image."));
+     // console.log(JSON.stringify("getting coin Image."));
       return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
     },
     getColor: (num) => {
-      console.log(JSON.stringify("getting coin color."));
+//      console.log(JSON.stringify("getting coin color."));
       return num > 0 ? "color:green;" : "color:red;";
     },
   },
