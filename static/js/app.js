@@ -18,6 +18,7 @@ let app = new Vue({
       axios.get(CRYPTOCOMPARE_API_URI + "/api/data/coinlist")
         .then((res) => {
             this.coinData = res.data.Data;
+            console.log(JSON.stringify("getting coin data."));
             console.log(JSON.stringify(this.coinData));
             this.getCoins();
           })
@@ -32,6 +33,7 @@ let app = new Vue({
       axios.get(COINMARKETCAP_API_URI + "/v1/ticker/?limit=10")
       .then((res) => {
         this.coins = res.data;
+      console.log(JSON.stringify("getting coin."));
       })
       .catch((err) => {
         console.error(err);
@@ -42,10 +44,11 @@ let app = new Vue({
       console.log(JSON.stringify(this.coinData));
       symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
-
+      console.log(JSON.stringify("getting coin Image."));
       return CRYPTOCOMPARE_API_URI + this.coinData[symbol].ImageUrl;
     },
     getColor: (num) => {
+      console.log(JSON.stringify("getting coin color."));
       return num > 0 ? "color:green;" : "color:red;";
     },
   },
