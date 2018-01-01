@@ -20,7 +20,7 @@ let app = new Vue({
         .then((res) => {
             this.coinData = res.data.Data;
             //console.log(JSON.stringify("getting coin data."));
-            console.log(JSON.stringify(res));
+            //console.log(JSON.stringify(res));
             this.getCoins();
           })
         .catch((err) => {
@@ -34,14 +34,14 @@ let app = new Vue({
       axios.get(COINMARKETCAP_API_URI + "/v1/ticker/?limit=10")
       .then((res) => {
         this.coins = res.data;
-      console.log(JSON.stringify("getting coin."));
+      //console.log(JSON.stringify("getting coin."));
       })
       .catch((err) => {
         console.error(err);
       });
     },
     getCoinImage: function(symbol) {
-      console.log(JSON.stringify(symbol));
+      //console.log(JSON.stringify(symbol));
       //console.log(JSON.stringify(this.coinData));
       symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
