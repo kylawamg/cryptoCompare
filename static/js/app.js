@@ -37,8 +37,8 @@ let app = new Vue({
       });
     },
     getCoinImage: function(symbol) {
-      console.log(json.stringify(symbol));
-      console.log(json.stringify(this.coinData));
+      console.log(JSON.stringify(symbol));
+      console.log(JSON.stringify(this.coinData));
       symbol = (symbol === "MIOTA" ? "IOT" : symbol);
       symbol = (symbol === "VERI" ? "VRM" : symbol);
 
